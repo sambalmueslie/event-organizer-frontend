@@ -1,0 +1,10 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" *ngIf="item != undefined">
+  <ng-container *ngIf="collapsed; then thenNavBlock else elseNavBlock"></ng-container>
+  <ng-template #thenNavBlock>
+    <mat-icon class="menu-item-icon-collapsed" fxFlex="0 1 30px">{{item.icon}}</mat-icon>
+  </ng-template>
+  <ng-template #elseNavBlock>
+    <mat-icon fxFlex="0 1 30px">{{item.icon}}</mat-icon>
+    <span fxFlex="1 1 auto">{{item.text | translate}}</span>
+  </ng-template>
+</div>

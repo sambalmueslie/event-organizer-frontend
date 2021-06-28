@@ -1,0 +1,11 @@
+{
+  "MENU": {
+    "Home": "Home",
+    "Event": "Event",
+    "Clan": "Clan",
+    "Admin": "Administration",
+    "Imprint": "Imprint",
+    "Logout": "Logout",
+    "Collapse": "Collapse"
+  }
+}
