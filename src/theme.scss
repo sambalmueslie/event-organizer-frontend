@@ -1,0 +1,17 @@
+@use '~@angular/material' as mat;
+
+$eo-primary: mat.define-palette(mat.$indigo-palette);
+$eo-accent: mat.define-palette(mat.$blue-gray-palette, A700, A600, A900);
+
+// The warn palette is optional (defaults to red).
+$eo-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$eo-theme: mat.define-light-theme((
+  color: (
+    primary: $eo-primary,
+    accent: $eo-accent,
+    warn: $eo-warn,
+  )
+));

@@ -1,14 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { ImprintRoutingModule } from './imprint-routing.module';
+import {ImprintRoutingModule} from './imprint-routing.module';
+import {ImprintHomeComponent} from './imprint-home/imprint-home.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MaterialModule} from "../material/material.module";
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ImprintHomeComponent
+  ],
   imports: [
     CommonModule,
-    ImprintRoutingModule
+    ImprintRoutingModule,
+    FlexLayoutModule,
+    MaterialModule
   ]
 })
-export class ImprintModule { }
+export class ImprintModule {
+}

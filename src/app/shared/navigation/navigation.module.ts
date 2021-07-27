@@ -6,12 +6,14 @@ import {FlexLayoutModule} from "@angular/flex-layout";
 import {TranslateModule} from "@ngx-translate/core";
 import {MainNavComponent} from './main-nav/main-nav.component';
 import {RouterModule} from "@angular/router";
+import { NavAuthItemComponent } from './nav-auth-item/nav-auth-item.component';
 
 
 @NgModule({
   declarations: [
     NavItemComponent,
-    MainNavComponent
+    MainNavComponent,
+    NavAuthItemComponent
   ],
   exports: [
     MainNavComponent

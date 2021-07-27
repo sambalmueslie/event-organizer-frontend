@@ -1,14 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { AdminRoutingModule } from './admin-routing.module';
+import {AdminRoutingModule} from './admin-routing.module';
+import {AdminHomeComponent} from './admin-home/admin-home.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {MaterialModule} from "../material/material.module";
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    AdminHomeComponent
+  ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    FlexLayoutModule,
+    MaterialModule
   ]
 })
-export class AdminModule { }
+export class AdminModule {
+}

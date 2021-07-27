@@ -8,6 +8,9 @@
       <a mat-list-item *ngFor="let item of items" routerLink="{{item.url}}" routerLinkActive="active">
         <app-nav-item [collapsed]="collapsed" [item]="item"></app-nav-item>
       </a>
+      <a mat-list-item>
+        <app-nav-auth-item [collapsed]="collapsed"></app-nav-auth-item>
+      </a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
