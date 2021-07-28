@@ -27,6 +27,6 @@
 }
 
 .active {
-  color: mat.get-color-from-palette($eo-accent, default-contrast);
-  background-color: mat.get-color-from-palette($eo-accent);
+  color: mat.get-color-from-palette($eo-primary, default-contrast);
+  background-color: mat.get-color-from-palette($eo-primary);
 }

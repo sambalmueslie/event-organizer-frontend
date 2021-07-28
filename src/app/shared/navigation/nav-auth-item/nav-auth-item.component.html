@@ -1,0 +1,21 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+  <ng-container *ngIf="collapsed; then thenNavBlock else elseNavBlock"></ng-container>
+  <ng-template #thenNavBlock>
+    <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+      <mat-icon class="menu-item-icon-collapsed" fxFlex="0 1 30px" (click)="auth.logout({ returnTo: document.location.origin })">logout</mat-icon>
+    </ng-container>
+    <ng-template #loggedOut>
+      <mat-icon class="menu-item-icon-collapsed" fxFlex="0 1 30px" (click)="auth.loginWithRedirect()">login</mat-icon>
+    </ng-template>
+  </ng-template>
+  <ng-template #elseNavBlock>
+    <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+      <mat-icon fxFlex="0 1 30px">logout</mat-icon>
+      <span fxFlex="1 1 auto" (click)="auth.logout({ returnTo: document.location.origin })">Logout</span>
+    </ng-container>
+    <ng-template #loggedOut>
+      <mat-icon fxFlex="0 1 30px">login</mat-icon>
+      <span fxFlex="1 1 auto" (click)="auth.loginWithRedirect()">Login</span>
+    </ng-template>
+  </ng-template>
+</div>

@@ -1,0 +1,60 @@
+<mat-toolbar>
+  <div fxFlex="1 1 auto" fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="space-between center">
+    <span fxFlex="1 1 auto">{{'EVENT.Change' | translate}}</span>
+    <div fxFlex="1 1 auto"></div>
+    <div fxFlex="0 1 auto">
+      <a mat-stroked-button color="primary">
+        <mat-icon>save</mat-icon>
+        {{'EVENT.Action.Save' | translate}}</a>
+    </div>
+  </div>
+</mat-toolbar>
+<div fxLayout="column" fxLayoutAlign="center stretch" fxLayoutGap="0px" class="base-container">
+  <form [formGroup]="eventForm" (ngSubmit)="submit()">
+    <div fxLayout="column" fxLayoutAlign="center stretch" fxLayoutGap="10px">
+      <mat-form-field appearance="outline" fxFlex="1 1 auto">
+        <mat-label>{{'EVENT.Change.Form.Title' | translate}}</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="title" required>
+        <mat-hint>{{'EVENT.Change.Form.Title.Hint' | translate}}</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex="1 1 auto">
+        <mat-label>{{'EVENT.Change.Form.Description' | translate}}</mat-label>
+        <textarea matInput required formControlName="description"></textarea>
+        <mat-hint>{{'EVENT.Change.Form.Description.Hint' | translate}}</mat-hint>
+      </mat-form-field>
+      <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="20px" fxFlex="1 1 auto">
+        <mat-form-field appearance="outline" fxFlex="1 1 auto">
+          <mat-label>{{'EVENT.Change.Form.Date' | translate}}</mat-label>
+          <input matInput [matDatepicker]="datePicker" formControlName="date" required>
+          <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+          <mat-datepicker #datePicker></mat-datepicker>
+          <mat-hint>{{'EVENT.Change.Form.Date.Hint' | translate}}</mat-hint>
+        </mat-form-field>
+        <mat-form-field appearance="outline" fxFlex="1 1 auto">
+          <mat-label>{{'EVENT.Change.Form.Time' | translate}}</mat-label>
+          <input matInput type="time" formControlName="time" required>
+          <mat-hint>{{'EVENT.Change.Form.Time.Hint' | translate}}</mat-hint>
+        </mat-form-field>
+      </div>
+      <mat-form-field appearance="outline" fxFlex="1 1 auto">
+        <mat-label>{{'EVENT.Change.Form.Rounds' | translate}}</mat-label>
+        <input type="number" matInput formControlName="rounds" required>
+        <mat-hint>{{'EVENT.Change.Form.Rounds.Hint' | translate}}</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="outline" fxFlex="1 1 auto">
+        <mat-label>{{'EVENT.Change.Form.Map' | translate}}</mat-label>
+        <mat-select formControlName="mapId">
+          <mat-option value="yes">St Marie Du Mont</mat-option>
+          <mat-option value="no">Hill 400</mat-option>
+          <mat-option value="no">Purple Heart Lane</mat-option>
+          <mat-option value="no">Carentan</mat-option>
+          <mat-option value="no">Sainte-Mere-Eglise</mat-option>
+          <mat-option value="no">Foy</mat-option>
+          <mat-option value="no">Hurtgen Forest</mat-option>
+        </mat-select>
+        <mat-hint>{{'EVENT.Change.Form.Map.Hint' | translate}}</mat-hint>
+      </mat-form-field>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <div fxFlex="1 1 auto" fxLayout="row" fxLayoutGap="15px" fxLayoutAlign="space-between center">
+    <span fxFlex="1 1 auto">{{'EVENT.Title' | translate}}</span>
+    <div fxFlex="1 1 auto"></div>
+    <div fxFlex="0 1 auto">
+      <a mat-stroked-button color="primary" routerLink="create">
+        <mat-icon>create</mat-icon>
+        {{'EVENT.Action.Create' | translate}}</a>
+    </div>
+  </div>
+</mat-toolbar>
+<div fxLayout="column" fxLayoutAlign="center stretch" fxLayoutGap="0px" class="base-container">
+  <app-event-list fxFlex="1 1 auto"></app-event-list>
+</div>
